@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accesorios</title>
+
+<link rel="stylesheet" href="StyleDesafio.css">
+
+<style>
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #ffffff;
+  color: #3f3e3e;
+  font-family: 'Poppins', sans-serif;
+}
+
+header {
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+}
+
+.logo {
+  font-family: 'Paytone One', serif;
+  font-size: 24px;
+  color: rgb(255, 0, 115);
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #3f3e3e;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: rgb(255, 85, 0);
+}
+
+#hero {
+  text-align: center;
+  padding: 100px 20px;
+  background: linear-gradient(180deg, #f4f5ff 0%, #ffffff 100%);
+}
+
+#hero h1 {
+  font-family: 'Palatino Linotype', 'Palatino', serif;
+  color: rgb(255, 0, 115);
+  font-size: 60px;
+  margin-bottom: 20px;
+}
+
+.cta {
+  background-color: rgb(255, 85, 0);
+  color: #fff;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s;
+}
+
+.cta:hover {
+  background-color: #ff7ed6;
+  transform: scale(1.05);
+}
+
+
+
+#accesorios {
+  padding: 80px 20px;
+  background-color: rgb(255, 162, 218);
+}
+
+#accesorios h2 {
+  font-family: 'Paytone One', serif;
+  text-align: center;
+  margin-bottom: 60px;
+  font-size: 36px;
+  color: rgb(255, 0, 115);
+}
+
+.Accesorios-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.accesorios-card {
+  width: 250px;
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 20px;
+  text-align: center;
+  padding: 20px;
+  transition: all 0.3s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.accesorios-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+.accesorios-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 10px;
+  transition: transform 0.3s;
+}
+
+.accesorios-card:hover img {
+  transform: scale(1.05);
+}
+
+.accesorios-card h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+  color: #ff35bc;
+}
+
+.precio {
+  font-weight: bold;
+  color: #ff35bc;
+}
+
+.descripcion {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.accesorios-card button {
+  background-color: rgb(255, 0, 115);
+  color: rgb(255, 162, 218);
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.accesorios-card button:hover {
+  background-color: #ffa319;
+  transform: scale(1.05);
+}
+
+
+#contacto {
+  padding: 80px 20px;
+}
+
+#contacto h2 {
+  font-family: 'Paytone One', serif;
+  text-align: center;
+  margin-bottom: 40px;
+  color: rgb(255, 0, 115);
+}
+
+form {
+  max-width: 400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+form input, form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+form button {
+  background-color: #ff9900;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.2s;
+}
+
+form button:hover {
+  background-color: #ffa319;
+}
+
+footer {
+  background-color: #ff7cd1;
+  color: #000000;
+  font-size: 14px;
+  text-align: center;
+  padding: 15px;
+  margin-top: 60px;
+}
+
+
+@media screen and (min-width: 375px) and (max-width: 667px) {
+  body {
+    background-color: rgb(255, 255, 255);
+  }
+}
+  
+
+@media screen and (min-width: 1200px) and (max-width: 1440px) {
+  body {
+    background-color: rgb(255, 255, 255);
+  }
+}
+  
+
+
+
+
+</style>
+
+
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Accesorios</div>
+            <ul class="nav-links">
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#Accesorios">Accesorios</a></li>
+                <li><a href="#Contacto">Contacto</a></li>
+
+        </nav>
+    </header>
+<main>
+    <section id="hero">
+        <h1>Encontra tu Accesorio Ideal</h1>
+        <button class="cta">Ver Accesorios</button>
+    </section>
+
+    <section id="accesorios">
+<h2>Accesorios Destacados</h2>
+     <div class="Accesorios-grid">
+        <div class="accesorios-card">
+            <img src="https://baliq.com/wp-content/uploads/2024/12/CAS-2868.jpg" alt="Collar de una Rosa">
+            <h3>Collar de Rosa</h3>
+            <p class="precio">$12000</p>
+            <p class="descripcion">Material:Plata</p>
+            <button>Ver detalles</button>
+        </div>
+
+<div class="accesorios-card">
+            <img src="https://cdnx.jumpseller.com/catracho-store/image/18160624/thumb/719/719?1628462601" alt="Aros elegantes">
+            <h3>Aros de Perlas</h3>
+            <p class="precio">$10000</p>
+            <p class="descripcion">Material:Plata</p>
+            <button>Ver detalles</button>
+        </div>
+
+<div class="accesorios-card">
+            <img src="https://cdn-media.glamira.com/media/product/newgeneration/view/1/sku/16563leenil1/diamond/diamond-Brillant_AAA/stone2/diamond-Brillant_AAA/alloycolour/white.jpg" alt="Anillo ">
+            <h3>Anillo de Diamante </h3>
+            <p class="precio">$8000</p>
+            <p class="descripcion">Material:Plata</p>
+            <button>Ver detalles</button>
+
+        </div>
+
+<div class="accesorios-card">
+            <img src="https://cdn-media.glamira.com/media/product/newgeneration/view/1/sku/clasia-b/diamond/rhodolite_AAA/alloycolour/white.jpg" alt="Pulcera">
+            <h3>Pulsera de Brillos</h3>
+            <p class="precio">$10000</p>
+            <p class="descripcion">Material:Plata</p>
+            <button>Ver detalles</button>
+        </div>
+
+
+
+
+<div class="accesorios-card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCruHGXxD2dnHqMxNlz_oGgxRnECE4TcchZg&s" alt="Collar con una Gema">
+            <h3>Collar de Con una Gema Rosa</h3>
+            <p class="precio">$14000</p>
+            <p class="descripcion">Material:Oro 18 Quilates</p>
+            <button>Ver detalles</button>
+        </div>
+
+<div class="accesorios-card">
+            <img src="https://resources.sears.com.mx/medios-plazavip/mkt/610196d1cae12_7502287293890jpg.jpg?scale=550" alt="Aros de Oro">
+            <h3>Aros con una Gema</h3>
+            <p class="precio">$12000</p>
+            <p class="descripcion">Material:Oro 18 Quilates</p>
+            <button>Ver detalles</button>
+        </div>
+
+
+<div class="accesorios-card">
+            <img src="https://ameliejoyas.mx/cdn/shop/files/PRODUCTO-ANILLO-SE-397.webp?v=1711403620" alt="Anillo de Oro">
+            <h3>Anillo de Oro </h3>
+            <p class="precio">$10000</p>
+            <p class="descripcion">Material:Oro 18 Quilates</p>
+            <button>Ver detalles</button>
+        </div>
+
+<div class="accesorios-card">
+            <img src="https://cdn-media.glamira.com/media/product/newgeneration/view/1/sku/20383appreciable/diamond/diamond-zirconia_AAAAA/alloycolour/yellow.jpg" alt="Pulsera de Oro">
+            <h3>Pulsera con Brillos</h3>
+            <p class="precio">$12000</p>
+            <p class="descripcion">Material:Oro 18 Quilates</p>
+            <button>Ver detalles</button>
+        </div>
+        </div>
+    </section>
+
+
+    <section id="contacto">
+        <h2>Contacto</h2>
+            <form>
+                <input type="text" placeholder="Nombre" required>
+                <input type="email" placeholder="Email" required>
+               <textarea placeholder="Mensaje" required></textarea>
+<button type="submit">Enviar</button>
+            </form>
+    </section>
+</main>
+    <footer>
+        <p>© Accesorios. Todos los derechos reservados</p>
+        
+    
+    
+    </footer>
+
+
+
+
+</body>
+</html>
